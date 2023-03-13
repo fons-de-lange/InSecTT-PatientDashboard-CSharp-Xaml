@@ -1,0 +1,44 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.902
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloCard", "HelloCard\HelloCard.csproj", "{C59019E6-BC1E-4CE2-BD4D-DBAD8BF2C92F}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "HelloCard.VB", "HelloCard.VB\HelloCard.VB.vbproj", "{7AB658DF-1508-4380-B831-B62C98C33AB8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloCard.WinForm", "HelloCard.WinForm\HelloCard.WinForm.csproj", "{2A2FF18D-5EDC-4253-A0D8-82E03DD1348B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+		TrialRelease|Any CPU = TrialRelease|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C59019E6-BC1E-4CE2-BD4D-DBAD8BF2C92F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C59019E6-BC1E-4CE2-BD4D-DBAD8BF2C92F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C59019E6-BC1E-4CE2-BD4D-DBAD8BF2C92F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C59019E6-BC1E-4CE2-BD4D-DBAD8BF2C92F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C59019E6-BC1E-4CE2-BD4D-DBAD8BF2C92F}.TrialRelease|Any CPU.ActiveCfg = Release|Any CPU
+		{C59019E6-BC1E-4CE2-BD4D-DBAD8BF2C92F}.TrialRelease|Any CPU.Build.0 = Release|Any CPU
+		{7AB658DF-1508-4380-B831-B62C98C33AB8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7AB658DF-1508-4380-B831-B62C98C33AB8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7AB658DF-1508-4380-B831-B62C98C33AB8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7AB658DF-1508-4380-B831-B62C98C33AB8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7AB658DF-1508-4380-B831-B62C98C33AB8}.TrialRelease|Any CPU.ActiveCfg = Release|Any CPU
+		{7AB658DF-1508-4380-B831-B62C98C33AB8}.TrialRelease|Any CPU.Build.0 = Release|Any CPU
+		{2A2FF18D-5EDC-4253-A0D8-82E03DD1348B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A2FF18D-5EDC-4253-A0D8-82E03DD1348B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A2FF18D-5EDC-4253-A0D8-82E03DD1348B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A2FF18D-5EDC-4253-A0D8-82E03DD1348B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2A2FF18D-5EDC-4253-A0D8-82E03DD1348B}.TrialRelease|Any CPU.ActiveCfg = TrialRelease|Any CPU
+		{2A2FF18D-5EDC-4253-A0D8-82E03DD1348B}.TrialRelease|Any CPU.Build.0 = TrialRelease|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {93932B77-3775-4AA9-81AE-D333A77B528C}
+	EndGlobalSection
+EndGlobal

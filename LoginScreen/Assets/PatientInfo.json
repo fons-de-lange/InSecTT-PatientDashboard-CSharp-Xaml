@@ -1,0 +1,125 @@
+[
+  {
+    "Id": "1",
+    "ResourceType": "Patient",
+
+    "PersonalDetails": {
+      "Name": {
+        "FirstName": "Jane",
+        "LastName": "Simpson"
+      },
+      "Role": "AF Patient",
+      "Gender": "F",
+      "DateOfBirth": "1985-11-17T10:12:00+02:00",
+                    
+      "Image": "PatientJaneSimpson.png",
+      "AddressAs": "Mr.",
+
+      "Properties": [
+        {
+          "Name": "Admission date",
+          "Value": "2023-03-27T11:10:00+02:00"
+        },
+        {
+          "Name": "Pathway",
+          "Value": "Sepsis"
+        },
+        {
+          "Name": "Comorbidity",
+          "Value": "Chronic atrial fibrillation"
+        },
+        {
+          "Name": "Comorbidity",
+          "Value": "Diabetes type 2"
+        },
+        {
+          "Name": "Comorbidity",
+          "Value": "Controlled atrial Fibrillation (AF)"
+        },
+        {
+          "Name": "Comorbidity",
+          "Value": "Obstructive Sleep Apnea (OSA)"
+        },
+        {
+          "Name": "Allergy",
+          "Value": "Penicilin"
+        },
+        {
+          "Name": "Allergy",
+          "Value": "Lactose"
+        },
+        {
+          "Name": "Allergy",
+          "Value": "Gluten"
+        },
+        {
+          "Name": "Risk factor",
+          "Value": "Morbid Obesity"
+        }
+      ]
+    }
+  },
+  {
+    "Id": "2",
+    "ResourceType": "Patient",
+
+    "PersonalDetails": {
+      "Name": {
+        "FirstName": "Peter",
+        "LastName": "Van Hulst"
+      },
+
+      "Role": "CV Patient",
+      "Gender": "M",
+      "DateOfBirth": "1967-01-08T11:11:00+08:00",
+                   
+      "Image": "PatientPeterVanHulst.png",
+      "AddressAs": "Mr.",
+      "Properties": [
+        {
+          "Name": "Admission date",
+          "Value": "2023-03-25T12:15:00+00:00"
+        },
+        {
+          "Name": "Pathway",
+          "Value": "Stroke"
+        },
+        {
+          "Name": "Comorbidity",
+          "Value": "Chronic Hypertension"
+        },
+        {
+          "Name": "Comorbidity",
+          "Value": "Diabetes type 2"
+        },
+        {
+          "Name": "Comorbidity",
+          "Value": "Hypercholesterolomie"
+        },
+        {
+          "Name": "Comorbidity",
+          "Value": "COPD"
+        },
+        {
+          "Name": "Allergy",
+          "Value": "Penicilin"
+        },
+        {
+          "Name": "Allergy",
+          "Value": "Lactose"
+        },
+        {
+          "Name": "Allergy",
+          "Value": "Gluten"
+        },
+        {
+          "Name": "Risk factor",
+          "Value": "Familiale Hypercholesterolomie (FH)"
+        }
+      ]
+    }
+  }
+]
+     
+
+        

@@ -1,0 +1,170 @@
+﻿<Window x:Class="LoginScreen.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LoginScreen"
+        mc:Ignorable="d"
+        Height="900" Width="1280"
+        Title="Philips Sidekick" FontStretch="ExtraExpanded" >
+
+    <Grid>
+
+        <Image  Source="Assets/BlueGradientScreen.png" Stretch="Fill" />
+
+        <StackPanel>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="170"></RowDefinition>
+                    <RowDefinition Height="300"></RowDefinition>
+                    <RowDefinition Height="80"></RowDefinition>
+                    <RowDefinition Height="270"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Border Grid.Row="0" Background="White" Margin="300,30,300,0" CornerRadius="25" Visibility="{Binding IsInSecTTPageTitleVisible}">
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <Image  Source="Assets/InSecTTLogo.png" Margin="0,10,0,10"  Height="120"  VerticalAlignment="Top"  />
+                        <TextBlock  HorizontalAlignment="Center" Text="Patient Dashboard" Margin="10,43,0,0" Foreground="Black" Background="White" FontSize="60" FontWeight="Bold" ></TextBlock>
+                    </StackPanel>
+                </Border>
+                <StackPanel Grid.Row="0" Orientation="Horizontal" Visibility="{Binding IsMedStaffMemberActiveVisible}" >
+                    <Image Source="{Binding ActiveMedStaffMemberPicture}" Margin="10, 10, 10,0" Height ="100" Stretch="Uniform" />
+                    <StackPanel Grid.Row="0" Margin="0, 50, 10,0" >
+                        <TextBlock Text="Logged on as:" Foreground="White" FontSize="10"/>
+                        <StackPanel Grid.Row="0" Orientation="Horizontal">
+                            <TextBlock Text="{Binding ActiveStaffMemberAddressAs}" VerticalAlignment="Center"  Foreground="White" FontSize="15"></TextBlock>
+                            <TextBlock Text="{Binding ActiveStaffMemberLastName}" VerticalAlignment="Center" Margin="5, 0, 0,0" Foreground="White" FontSize="15"></TextBlock>
+                            
+                        </StackPanel>
+                        <Button Content="Log out" Margin="0,10,0,0" Click="LogoutButtonClick"/>
+                    </StackPanel>
+                </StackPanel>
+
+                <Image  Grid.Row="1" Source="Assets/Philips Logo White Foreground.png" Margin="0,120,0,0"  Height="120"  VerticalAlignment="Top" Visibility="{Binding IsPhilipsLogoVisible}" Grid.ColumnSpan="2"/>
+                <!--<Label Grid.Row="1" Content="Analyzing" Margin="400,50,400,0" FontWeight="Bold" FontSize="40"   Foreground="White" Height="60" VerticalAlignment="Top" Width="300" HorizontalAlignment="Center"   Visibility="{Binding IsPatientStatusAnalyzingVisible}" ></Label>-->
+                <TextBlock Grid.Row="1" Margin="0,160,0,0" HorizontalAlignment="Center" Text="Analyzing"  Foreground="White" FontStyle="Italic" FontSize="60" FontWeight="Bold" Visibility="{Binding IsPatientStatusAnalyzingVisible}" Grid.ColumnSpan="2" ></TextBlock>
+
+                <StackPanel Grid.Row="1" Margin="0,120,0,10" Visibility="{Binding IsSelectPatientButtonVisible}">
+                    <TextBlock  HorizontalAlignment="Center" Text="Do you want to View a Patient File?" Margin="0,0,0,10" Foreground="LightGray" FontSize="25" FontStyle="Italic" Visibility="{Binding IsSelectPatientButtonVisible}" ></TextBlock>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" >
+                        <Button Content="Select Nearby Patient" FontWeight="Bold"  FontSize="25" Width="300" Foreground="White" Background="SteelBlue"  Height="60" VerticalAlignment="Top" Margin="0,0,30,0" BorderThickness="2" BorderBrush="LightBlue"  Click="ButtonSelectNearbyPatientClick"></Button>
+                        <Button Content="Lookup Other Patient" FontWeight="Bold" FontSize="25"  Width="300" Foreground="White" Height="60" VerticalAlignment="Top" BorderThickness="2" Background="SteelBlue" BorderBrush="LightBlue" ></Button>
+                    </StackPanel>
+                </StackPanel>
+                <StackPanel Grid.Row="1" Margin="0,120,0,10" Visibility="{Binding IsPatientStartAnalysisButtonVisible}">
+                    <TextBlock  HorizontalAlignment="Center" Text="Do you want to View a Patient File?" Margin="0,0,0,10" Foreground="LightGray" FontSize="25" FontStyle="Italic" Visibility="{Binding IsSelectPatientButtonVisible}" ></TextBlock>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" >
+                        <Button Content="Analyze Patient Health Status" FontWeight="Bold"  FontSize="35" Width="500" Foreground="White" Background="SteelBlue"  Height="60" VerticalAlignment="Top" Margin="0,0,30,0" BorderThickness="2" BorderBrush="LightBlue"  Click="AnalyzePatientButtonClick"></Button>
+                        <Button Content="Cancel" FontWeight="Bold" FontSize="25"  Width="300" Foreground="White" Height="60" VerticalAlignment="Top" BorderThickness="2" Background="SteelBlue" BorderBrush="LightBlue" Click="AnalyzePatientCancelButtonClick"></Button>
+                    </StackPanel>
+                </StackPanel>
+
+                <TextBlock Grid.Row="1" Margin="0,160,0,0" HorizontalAlignment="Center" Text="Access Denied: Not a Medical Staff Member ID Card"  Foreground="White" FontStyle="Italic" FontSize="60" FontWeight="Bold" Visibility="{Binding IsAccessDeniedMessageVisible}" Grid.ColumnSpan="2" ></TextBlock>
+                <TextBlock Grid.Row="1" Margin="0,160,0,0" HorizontalAlignment="Center" Text="Unknown Medical Staff Member ID"  Foreground="White" FontStyle="Italic" FontSize="60" FontWeight="Bold" Visibility="{Binding IsUnknownIdMessageVisible}" Grid.ColumnSpan="2" ></TextBlock>
+                <TextBlock Grid.Row="1" Margin="0,160,0,0" HorizontalAlignment="Center" Text="Invalid ID Card"  Foreground="White" FontStyle="Italic" FontSize="60" FontWeight="Bold" Visibility="{Binding IsInvalidIdCardMessageVisible}" Grid.ColumnSpan="2" ></TextBlock>
+                <TextBlock Grid.Row="1" Margin="0,160,0,0" HorizontalAlignment="Center" Text="Not a valid Patient ID Card"  Foreground="White" FontStyle="Italic" FontSize="60" FontWeight="Bold" Visibility="{Binding IsInvalidPatientIdCardMessageVisible}" Grid.ColumnSpan="2" ></TextBlock>
+
+                <StackPanel Grid.Row="1" Margin="0,90,0,50" >
+                    <TextBlock  HorizontalAlignment="Center"  Text="Enter your personal Pincode or Password for enhanced security" Foreground="White" FontSize="25" FontStyle="Italic" Margin="0,0,0,10" Visibility="{Binding IsPasswordEntryVisible}"></TextBlock>
+                    <PasswordBox Name="PasswordBox"  HorizontalAlignment="Center" Foreground="White" Background="Black" BorderBrush="SlateGray" BorderThickness="2" Width="140" Height="45" FontSize="30" KeyDown="PasswordBox_KeyDown" KeyUp="PasswordBox_KeyUp" Visibility="{Binding IsPasswordEntryVisible}" />
+                    <TextBlock  HorizontalAlignment="Center"  Text="Incorrect Pincode or Password, Please try again" Foreground="White" FontSize="20" Margin="0,20,0,0" FontStyle="Italic" Visibility="{Binding IsPasswordIncorrectMessageVisible}"></TextBlock>
+                </StackPanel>
+            
+                <TextBlock Grid.Row="2" Margin="0,40,0,0" HorizontalAlignment="Center"  Text="Please present your ID card to log in" Foreground="White" FontSize="25" FontStyle="Italic"  Visibility="{Binding IsPresentDoctorIdCardMessageVisible}"></TextBlock>
+                <TextBlock Grid.Row="2" Margin="0,40,0,0" HorizontalAlignment="Center"  Text="Please present ID card of nearby Patient to view Medical Records" Foreground="White" FontSize="25" FontStyle="Italic"  Visibility="{Binding IsPresentPatientIdCardMessageVisible}"></TextBlock>
+                <StackPanel Grid.Row="2" Margin="0,40,0,0" Orientation="Horizontal"  HorizontalAlignment="Center" Visibility="{Binding IsWelcomeMessageVisible}">
+                    <TextBlock Text="Welcome " Foreground="LightGray" FontSize="25"   ></TextBlock>
+                    <!--<TextBlock Grid.Row="2" Margin="0,40,0,0" HorizontalAlignment="Center"  Text="{Binding WelcomeMessage}" Foreground="LightGray" FontSize="25"   Visibility="{Binding IsWelcomeMessageVisible}"></TextBlock>-->
+                    <TextBlock Text="{Binding ActiveStaffMemberAddressAs}"  Foreground="LightGray" FontSize="25"></TextBlock>
+                    <TextBlock Text="{Binding ActiveStaffMemberLastName}"   Foreground="LightGray" FontSize="25" Margin="7,0,0,0"></TextBlock>
+
+                </StackPanel>
+                <TextBlock Grid.Row="2" Margin="0,40,0,0" HorizontalAlignment="Center"  Text="Information Read from Card" Foreground="LightGray" FontSize="25"  Visibility="{Binding IsCardReadMessageVisible}"></TextBlock>
+            
+                <Image Grid.Row="3" Source="Assets/RFID-Card-Picture.png" Width="400" Height="250" Stretch="Fill" Visibility="{Binding IsRfIdCardImageVisible}" />
+                <StackPanel Grid.Row="3"  HorizontalAlignment="Center" Orientation="Horizontal" Visibility="{Binding IsPersonInfoVisible}">
+                    <Border BorderThickness="2,2,2,2" BorderBrush="Black" >
+                        <Image  Source="{Binding CurrentPersonInfoPicture}"   Stretch="Uniform" />
+                    </Border>
+                    <StackPanel Orientation="Horizontal">
+                        <Border Width="10"></Border>
+                        <ListBox ItemsSource="{Binding PersonPropertiesNameValuePairs}" Height="270" MinWidth="300"  Background="Black" BorderBrush="Black" BorderThickness="2" Margin="0,0,0,-0.4" VerticalAlignment="Bottom" Visibility="{Binding IsMedStaffMemberOverviewVisible}">
+                            <ListBox.ItemTemplate>
+                                <DataTemplate>
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="150"></ColumnDefinition>
+                                            <ColumnDefinition Width="*"></ColumnDefinition>
+                                        </Grid.ColumnDefinitions>
+                                        <TextBlock Grid.Column="0"  Foreground="SlateGray" Background="Black" Text="{Binding Name}" FontSize="20" VerticalAlignment="Top">
+                                        </TextBlock>
+                                        <TextBlock Grid.Column="1"  Foreground="SlateGray" Background="Black" Text="{Binding Value}" FontSize="20" VerticalAlignment="Top" >
+                                        </TextBlock>
+                                    </Grid>
+                                </DataTemplate>
+                            </ListBox.ItemTemplate>
+                        </ListBox>
+                        
+                       
+                        <StackPanel Visibility="{Binding IsPatientOverviewVisible}">
+                            <Label Content="Patient information" Foreground="LightGray" FontSize="25"></Label>
+                            <ListBox ItemsSource="{Binding PersonPropertiesNameValuePairs}" Height="250" MinWidth="200"  Background="Black" BorderBrush="Black" BorderThickness="2" Margin="0,0,0,-0.4" VerticalAlignment="Bottom" Visibility="{Binding IsPatientOverviewVisible}">
+                                <ListBox.ItemTemplate>
+                                    <DataTemplate>
+                                        <Grid>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="150"></ColumnDefinition>
+                                                <ColumnDefinition Width="*"></ColumnDefinition>
+                                            </Grid.ColumnDefinitions>
+                                            <TextBlock Grid.Column="0"  Foreground="SlateGray" Background="Black" Text="{Binding Name}" FontSize="20" VerticalAlignment="Top">
+                                            </TextBlock>
+                                            <TextBlock Grid.Column="1"  Foreground="SlateGray" Background="Black" Text="{Binding Value}" FontSize="20" VerticalAlignment="Top" >
+                                            </TextBlock>
+                                        </Grid>
+                                    </DataTemplate>
+                                </ListBox.ItemTemplate>
+                            </ListBox>
+                           
+                        </StackPanel>
+                        <Border Width="10"></Border>
+                        <StackPanel Visibility="{Binding IsPatientOverviewVisible}">
+                            <Label Content="Comorbidities" Foreground="LightGray" FontSize="25"></Label>
+                            <ListBox ItemsSource="{Binding PatientComorbidities}" Height="250"   Background="Black" BorderBrush="Black" BorderThickness="2" Margin="0,0,0,-0.4" VerticalAlignment="Bottom" Visibility="{Binding IsPatientOverviewVisible }">
+                            <ListBox.ItemTemplate>
+                                <DataTemplate>
+                                        <TextBlock Grid.Column="0"  Foreground="SlateGray" Background="Black" Text="{Binding Value}" FontSize="20" VerticalAlignment="Top">
+                                        </TextBlock>
+                                </DataTemplate>
+                            </ListBox.ItemTemplate>
+                        </ListBox>
+                        </StackPanel>
+                        <Border Width="10"></Border>
+                        <StackPanel Visibility="{Binding IsPatientOverviewVisible}">
+                            <Label Content="Allergies" Foreground="LightGray" FontSize="25"></Label>
+                            <ListBox ItemsSource="{Binding PatientAllergies}" Height="250"   Background="Black" BorderBrush="Black" BorderThickness="2" Margin="0,0,0,-0.4" VerticalAlignment="Bottom" Visibility="{Binding IsPatientOverviewVisible }">
+                                <ListBox.ItemTemplate>
+                                    <DataTemplate>
+                                        <TextBlock Grid.Column="0"  Foreground="SlateGray" Background="Black" Text="{Binding Value}" FontSize="20" VerticalAlignment="Top">
+                                        </TextBlock>
+                                    </DataTemplate>
+                                </ListBox.ItemTemplate>
+                            </ListBox>
+                        </StackPanel>
+                        <Border Width="10"></Border>
+                        <StackPanel Visibility="{Binding IsPatientOverviewVisible}">
+                            <Label Content="Risk factors" Foreground="LightGray" FontSize="25"></Label>
+                            <ListBox ItemsSource="{Binding PatientRiskFactors}" Height="250"   Background="Black" BorderBrush="Black" BorderThickness="2" Margin="0,0,0,-0.4" VerticalAlignment="Bottom" Visibility="{Binding IsPatientOverviewVisible }">
+                                <ListBox.ItemTemplate>
+                                    <DataTemplate>
+                                        <TextBlock Grid.Column="0"  Foreground="SlateGray" Background="Black" Text="{Binding Value}" FontSize="20" VerticalAlignment="Top">
+                                        </TextBlock>
+                                    </DataTemplate>
+                                </ListBox.ItemTemplate>
+                            </ListBox>
+                        </StackPanel>
+                    </StackPanel>
+                </StackPanel>
+
+            </Grid>
+        </StackPanel>
+    </Grid>
+</Window>

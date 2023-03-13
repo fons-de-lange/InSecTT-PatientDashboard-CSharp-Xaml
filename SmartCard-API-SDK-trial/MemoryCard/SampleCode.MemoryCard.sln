@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.852
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MemoryCard", "MemoryCard\MemoryCard.csproj", "{397B59A4-6C99-4C64-870B-F7B637E1A031}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MCARD", "MCARD\MCARD.csproj", "{9D1D6409-EE60-4905-BC58-A53D53AE3B13}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+		TrialRelease|Any CPU = TrialRelease|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{397B59A4-6C99-4C64-870B-F7B637E1A031}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{397B59A4-6C99-4C64-870B-F7B637E1A031}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{397B59A4-6C99-4C64-870B-F7B637E1A031}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{397B59A4-6C99-4C64-870B-F7B637E1A031}.Release|Any CPU.Build.0 = Release|Any CPU
+		{397B59A4-6C99-4C64-870B-F7B637E1A031}.TrialRelease|Any CPU.ActiveCfg = TrialRelease|Any CPU
+		{397B59A4-6C99-4C64-870B-F7B637E1A031}.TrialRelease|Any CPU.Build.0 = TrialRelease|Any CPU
+		{9D1D6409-EE60-4905-BC58-A53D53AE3B13}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9D1D6409-EE60-4905-BC58-A53D53AE3B13}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9D1D6409-EE60-4905-BC58-A53D53AE3B13}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9D1D6409-EE60-4905-BC58-A53D53AE3B13}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9D1D6409-EE60-4905-BC58-A53D53AE3B13}.TrialRelease|Any CPU.ActiveCfg = Release|Any CPU
+		{9D1D6409-EE60-4905-BC58-A53D53AE3B13}.TrialRelease|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {98C6BCE7-21BD-463E-B966-98AEE2B7BFB0}
+	EndGlobalSection
+EndGlobal

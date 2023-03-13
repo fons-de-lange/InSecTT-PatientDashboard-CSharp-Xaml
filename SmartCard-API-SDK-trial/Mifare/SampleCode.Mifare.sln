@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.40629.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mifare", "Mifare\Mifare.csproj", "{EFE76CF7-D2ED-46FC-87B7-5BEA3CA991DE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EFE76CF7-D2ED-46FC-87B7-5BEA3CA991DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EFE76CF7-D2ED-46FC-87B7-5BEA3CA991DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EFE76CF7-D2ED-46FC-87B7-5BEA3CA991DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EFE76CF7-D2ED-46FC-87B7-5BEA3CA991DE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A69C6E61-2D0B-4D10-8F07-E1EA69949D09}
+	EndGlobalSection
+EndGlobal

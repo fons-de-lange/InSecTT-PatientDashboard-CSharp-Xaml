@@ -1,0 +1,16 @@
+﻿<Window x:Class="EnterPinCodeScreen.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:EnterPinCodeScreen"
+        mc:Ignorable="d"
+        Title="Pincode Entry" Height="220" Width="400">
+    <Grid>
+        <StackPanel>
+            <TextBlock  HorizontalAlignment="Center"  Text="Enter your pincode"  FontSize="30" Margin="0,30,0,30"></TextBlock>
+
+            <TextBox x:Name="PinCodeBox" BorderBrush="Black" BorderThickness="4" FontSize="40" KeyDown="TextBox_KeyDown" Width="150" HorizontalAlignment="Center" />
+        </StackPanel>
+    </Grid>
+</Window>

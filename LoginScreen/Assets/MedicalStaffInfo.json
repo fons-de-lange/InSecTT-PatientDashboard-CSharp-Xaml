@@ -1,0 +1,73 @@
+[
+  {
+    "Id": "1",
+    "ResourceType": "MedStaff",
+
+    "PersonalDetails": {
+      "Name": {
+        "FirstName": "Floyd",
+        "LastName": "Reynolds"
+      },
+      "Role": "Physician",
+      "Gender": "M",
+      "DateOfBirth": "1985-08-04T07:11:00+02:00",
+      "Image": "DrFloydReynolds.png",
+      "AddressAs": "Dr.",
+
+      "Properties": [
+        {
+          "Name": "Title",
+          "Value": "Head of the Cardiac Surgical Department"
+        },
+        {
+          "Name": "Department",
+          "Value": "Department of Surgery"
+        },
+        {
+          "Name": "Hospital",
+          "Value": "New Amsterdam Medical Center"
+        },
+        {
+          "Name": "Occupation",
+          "Value": "Cardiovascular Surgeon"
+        }
+      ]
+
+    }
+  },
+  {
+    "Id": "2",
+    "ResourceType": "MedStaff",
+
+    "PersonalDetails": {
+      "Name": {
+        "FirstName": "Linda",
+        "LastName": "Weber"
+      },
+      "Role": "Nurse",
+      "Gender": "F",
+      "DateOfBirth": "1985-05-01T11:11:00+08:00",
+      "Image": "Nurse-Weber.png",
+      "AddressAs": "Nurse",
+
+      "Properties": [
+        {
+          "Name": "Title",
+          "Value": "ED Resident"
+        },
+        {
+          "Name": "Department",
+          "Value": "Emergency Department"
+        },
+        {
+          "Name": "Hospital",
+          "Value": "New Amsterdam Medical Center"
+        },
+        {
+          "Name": "Occupation",
+          "Value": "Emergency Care"
+        }
+      ]
+    }
+  }
+]

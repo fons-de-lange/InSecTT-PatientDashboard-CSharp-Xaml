@@ -1,0 +1,56 @@
+﻿<Window x:Class="PatientHealthStatusScreen.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PatientHealthStatusScreen"
+        xmlns:oxy="http://oxyplot.org/wpf"
+        mc:Ignorable="d"
+        DataContext="{Binding}"
+        Title="Patient Health Status Overview" FontWeight="ExtraBold" FontSize="20" Height="1080" Width="1920">
+        
+    
+    <Grid>
+        <DockPanel  HorizontalAlignment="Left" LastChildFill="False"  VerticalAlignment="Top" >
+            <Button Name="GET" Click="GET_OnClick"></Button>
+            <DockPanel DockPanel.Dock="Left">
+                <!--<Button Content="GET"  Click="ButtonBase_OnClick"></Button>-->
+                <StackPanel DockPanel.Dock="Top" Width="900" Height="300">
+                    <Label Content="{Binding NxpLofsViewModel.ImageDescription }" HorizontalAlignment="Center" FontSize="30"   VerticalAlignment="Top" />
+                    <TextBlock Grid.Row="1" Text="{Binding NxpLofsViewModel.ErrorMessageDetail}" HorizontalAlignment="Center" FontSize="20"   VerticalAlignment="Top" Visibility="{Binding IsErrorMessageVisible}" Width="400" TextWrapping="Wrap" />
+                    <Image  Source="{Binding NxpLofsViewModel.ImageReceived}" Stretch="Uniform"  />
+                </StackPanel>
+                <StackPanel DockPanel.Dock="Bottom" MinWidth="500" Height="700">
+                    <Label Content="{Binding TudEcgCompressedViewModel.ImageDescription}" HorizontalAlignment="Center" FontSize="30"   VerticalAlignment="Top" />
+                    <TextBlock Grid.Row="1" Text="{Binding TudEcgCompressedViewModel.ErrorMessageDetail}" HorizontalAlignment="Center" FontSize="20"   VerticalAlignment="Top" Visibility="{Binding IsErrorMessageVisible}" Width="400" TextWrapping="Wrap" />
+
+                    <Image  Source="{Binding TudEcgCompressedViewModel.ImageReceived}" Width="700" Stretch="UniformToFill"  />
+                </StackPanel>
+            </DockPanel>
+            <DockPanel DockPanel.Dock="Right">
+                <StackPanel DockPanel.Dock="Top" Width="600" Height="400">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="350"/>
+                        </Grid.RowDefinitions>
+                        <StackPanel>
+                            <Label Grid.Row="0" Content="{Binding VttViewModel.WindowDescription}" HorizontalAlignment="Center" FontSize="30"   VerticalAlignment="Top" />
+                            <TextBlock Grid.Row="1" Text="{Binding VttViewModel.ErrorMessageDetail}" HorizontalAlignment="Center" FontSize="20"   VerticalAlignment="Top" Visibility="{Binding IsErrorMessageVisible}" Width="400" TextWrapping="Wrap" />
+                        </StackPanel>
+                        <oxy:PlotView Grid.Row="1" Model="{Binding VttViewModel.VitalSignPlotModel}" IsEnabled="{Binding IsPlotEnabled}" Visibility="{Binding IsPlotVisible}"/>
+                    </Grid>
+                </StackPanel>
+                <StackPanel DockPanel.Dock="Bottom" MinWidth="500" Height="430">
+                    <StackPanel DockPanel.Dock="Top" Width="600" Height="600" Margin="0,20,0,0">
+                        <Label Content="{Binding JsiAnomalyViewModel.ImageDescription}" HorizontalAlignment="Center" FontSize="30"   VerticalAlignment="Bottom" />
+                        <TextBlock Grid.Row="1" Text="{Binding JsiAnomalyViewModel.ErrorMessageDetail}" HorizontalAlignment="Center" FontSize="20"   VerticalAlignment="Top" Visibility="{Binding IsErrorMessageVisible}" Width="400" TextWrapping="Wrap" />
+
+                        <Image  Source="{Binding JsiAnomalyViewModel.ImageReceived}" Stretch="UniformToFill"  />
+                    </StackPanel>
+                    
+                </StackPanel>
+            </DockPanel>
+        </DockPanel>
+    </Grid>
+</Window>

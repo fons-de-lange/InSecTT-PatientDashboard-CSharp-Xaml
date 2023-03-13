@@ -1,0 +1,33 @@
+﻿<Window x:Class="PatientHealthStatusOverviewScreen.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PatientHealthStatusOverviewScreen"
+        mc:Ignorable="d"
+        Title="Patient Health Status Overview" Height="1080" Width="1920">
+    <Grid>
+        <DockPanel  HorizontalAlignment="Left" LastChildFill="False"  VerticalAlignment="Top" >
+            <DockPanel DockPanel.Dock="Left">
+                <StackPanel DockPanel.Dock="Top" Width="1200" Height="300">
+                    <Label Content="{Binding WindowDescription}" HorizontalAlignment="Center" FontSize="30"   VerticalAlignment="Top" />
+                    <Image  Source="{Binding ImageReceived}" Stretch="Uniform"  />
+                </StackPanel>
+                <StackPanel DockPanel.Dock="Bottom" MinWidth="500" Height="300">
+                    <Label Content="{Binding WindowDescription}" HorizontalAlignment="Center" FontSize="30"   VerticalAlignment="Top" />
+                    <Image  Source="{Binding ImageReceived}" Stretch="Uniform"  />
+                </StackPanel>
+            </DockPanel>
+            <DockPanel DockPanel.Dock="Right">
+                <StackPanel DockPanel.Dock="Top" Width="600" Height="300">
+                    <Label Content="{Binding WindowDescription}" HorizontalAlignment="Center" FontSize="30"   VerticalAlignment="Top" />
+                    <Image  Source="{Binding ImageReceived}" Stretch="Uniform"  />
+                </StackPanel>
+                <StackPanel DockPanel.Dock="Bottom" MinWidth="500" Height="300">
+                    <Label Content="{Binding WindowDescription}" HorizontalAlignment="Center" FontSize="30"   VerticalAlignment="Top" />
+                    <Image  Source="{Binding ImageReceived}" Stretch="Uniform"  />
+                </StackPanel>
+            </DockPanel>
+        </DockPanel>
+    </Grid>
+</Window>
